@@ -218,14 +218,14 @@ object Trait {
 }
 
 /**
- * Privacy is an illusion.
+ * Package private should be Java private.
  */
 private[it] object PPrivate {
   def method = ()
 }
 
 /**
- * Privacy is an illusion.
+ * Private remains private.
  */
 private object Private {
   def method = ()
@@ -239,7 +239,7 @@ protected[it] object PProtected {
 }
 
 /**
- * Privacy is an illusion.
+ * Package private should be Java private.
  */
 private[it] trait PTrait {
   def method = ()
