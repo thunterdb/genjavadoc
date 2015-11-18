@@ -47,6 +47,7 @@ trait AST { this: TransformCake ⇒
         case ClassDef(mods, _, tparams, impl) ⇒
           val name = c.name.toString
           val acc = access(mods, topLevel)
+          println(s"symbol: $name modifiers: ${mods.privateWithin}")
           val fl = flags(mods)
           val kind = if (mods.isInterface || mods.isTrait) "interface" else "class"
           val tp = c.symbol.owner.thisType.memberInfo(c.symbol) match {
